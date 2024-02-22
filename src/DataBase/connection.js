@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize'); 
 
-var dataBase = 'restaurantdb'; 
+var dataBase = 'restaurantDB'; 
 var userName = 'postgres'; 
 var password = '3641'; 
 
