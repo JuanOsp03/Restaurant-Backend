@@ -1,14 +1,15 @@
-const connection = require('./DataBase/connection');
+require('./DataBase/sync.js');
+
+const connection = require('./DataBase/connection.js');
 const express = require('express');
-const { Connection } = require('pg');
 const app = express();
 
-const port  = process.env.PORT || 1337;
+const port  = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
-connection.sync()
+connection.sync({force: false})
     .then(()=>{
         console.log('Bases de datos sincronizada');
         app.listen(port, ()=>{
@@ -16,5 +17,5 @@ connection.sync()
         });
     })
     .catch((error) =>{
-        console.error('Error al sincronizar la base de datos' , error);
+        console.error('Error al sincronizar la base de datos ' + error);
     });
