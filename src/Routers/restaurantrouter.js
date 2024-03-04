@@ -6,5 +6,6 @@ router.post('/createrestaurant', restaurantController.createRestaurant);
 router.get('/listrestaurant', restaurantController.listRestaurant);
 router.put('/updaterestaurant/:restaurantId', restaurantController.updateRestaurant);
 router.put('/disablerestaurant/:restaurantId', restaurantController.disableRestaurant);
+router.put('/enablerestaurant/:restaurantId', restaurantController.enableRestaurant);
 
 module.exports = router;
