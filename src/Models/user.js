@@ -20,13 +20,13 @@ user.init({
         unique: true,
         allowNull: false
     },
-    userIdentifiaction: {
+    userIdentificationType: {
         type: DataTypes.STRING,
         allowNull: false,
     },
     userName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
     },
     userPassword: {
         type: DataTypes.STRING,
